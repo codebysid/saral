@@ -9,17 +9,17 @@ const ProfilePanel = lazy(() => import("./components/ProfilePanel"))
 
 function App() {
   return (
-    <>
+    <div>
       <div className='justify-center hidden lg:flex'>
 
-        <div className='flex flex-col gap-6 p-6 w-[470px]'>
+        <div className='flex flex-col gap-5 p-3 w-[470px]'>
           <Suspense fallback={<Loader />}>
             <CommissionPanel />
             <LinksAndCodes />
           </Suspense>
         </div>
 
-        <div className=' flex flex-col gap-6 p-6 w-[500px]'>
+        <div className=' flex flex-col gap-5 p-3 w-[500px]'>
           <Suspense fallback={<Loader />}>
             <ProfilePanel />
             <EarningsPanel />
@@ -46,7 +46,7 @@ function App() {
         </div>
 
       </div>
-    </>
+    </div>
   )
 }
 

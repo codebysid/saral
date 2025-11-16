@@ -9,7 +9,7 @@ const CommissionCard = () => {
     return (
         <div className="w-[284px] lg:w-[335px] relative">
             <img
-                src="/card-bg.avif"
+                src="/card-bg.webp"
                 className=" top-0 left-0 w-[335px] h-[197px] object-cover object-center rounded-[16px]"
                 alt="card bg"
                 fetchPriority="high"

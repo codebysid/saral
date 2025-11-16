@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils"
 import Icons from "./Icons"
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useState } from "react";
 import Loader from "./Loader";
 const Slider = lazy(() =>
     import("@/components/ui/slider").then((m) => ({
@@ -9,6 +9,7 @@ const Slider = lazy(() =>
 );
 
 const EarningsPanel = () => {
+    const [numberOfPost, setNumberOfPosts] = useState<number[]>([0])
     return (
         <div className=" w-full bg-white rounded-[8px] flex flex-col gap-[32px] p-6">
 
@@ -38,9 +39,11 @@ const EarningsPanel = () => {
                 </div>
                 <Suspense fallback={<Loader />}>
                     <Slider
-                        defaultValue={[50]}
-                        max={100}
+                        defaultValue={[0]}
+                        max={15}
                         step={1}
+                        value={numberOfPost}
+                        onValueChange={setNumberOfPosts}
                         className={cn("w-[100%]")}
                     />
                 </Suspense>
