@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils"
 import Icons from "./Icons"
 import { lazy, Suspense } from "react";
+import Loader from "./Loader";
 const Slider = lazy(() =>
     import("@/components/ui/slider").then((m) => ({
         default: m.Slider,
@@ -35,7 +36,7 @@ const EarningsPanel = () => {
                     <span>1 Post</span>
                     <span>15 Posts</span>
                 </div>
-                <Suspense fallback={<p>Loading...</p>}>
+                <Suspense fallback={<Loader />}>
                     <Slider
                         defaultValue={[50]}
                         max={100}

@@ -1,5 +1,6 @@
 import { lazy, Suspense, useState } from "react"
 import Icons from "./Icons"
+import { Loader } from "lucide-react";
 
 const DropdownMenu = lazy(() =>
     import("@/components/ui/dropdown-menu").then((m) => ({
@@ -35,7 +36,7 @@ const CalendarDropDown = () => {
 
     return (
         <div>
-            <Suspense fallback={null}>
+            <Suspense fallback={<Loader />}>
                 <DropdownMenu>
                     <DropdownMenuTrigger className=" flex items-center gap-2 py-2 px-2.5 border border-custom-border rounded-lg cursor-pointer">
                         <div className=" flex gap-1 items-center">
