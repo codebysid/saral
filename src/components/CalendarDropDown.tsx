@@ -40,7 +40,13 @@ const CalendarDropDown = () => {
                 <DropdownMenu>
                     <DropdownMenuTrigger className=" flex items-center gap-2 py-2 px-2.5 lg:border lg:border-custom-border rounded-lg cursor-pointer">
                         <div className=" flex gap-1 items-center">
-                            <Icons name="calendarIcon" />
+                            <div className="hidden lg:block">
+                                <Icons name="calendarIcon" />
+                            </div>
+
+                            <div className="lg:hidden">
+                                <Icons name="calendarIconSmall" />
+                            </div>
                             <span className=" font-medium text-[14px] text-[#212121] hidden lg:inline">
                                 {"All Time"}
                             </span>

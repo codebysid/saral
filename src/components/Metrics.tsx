@@ -25,7 +25,7 @@ const metrics = [ // will be fetched from BE
 
 const Metrics = () => {
     return (
-        <div className=" grid grid-cols-2 gap-[24px]">
+        <div className=" grid grid-cols-2 gap-[14px] lg:gap-[24px]">
             {
                 metrics.map(({ count, id, name }) => {
                     return <MetricCard key={id} count={count} name={name} />

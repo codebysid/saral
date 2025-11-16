@@ -24,7 +24,7 @@ const Navbar = () => {
                 <NotificationPanel />
             </nav>
 
-            <nav className="flex items-center w-full justify-between px-3 h-[62px] border border-custom-border bg-white lg:hidden">
+            <nav className="flex items-center w-full justify-between px-3 h-[62px]  bg-white lg:hidden">
                 <h1 className=" font-medium text-[20px] text-black">Home</h1>
                 <NotificationPanel />
             </nav>
