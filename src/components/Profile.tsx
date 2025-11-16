@@ -20,10 +20,11 @@ const Profile = () => {
     }
 
     return (
-        <div className=" flex flex-col justify-center items-center gap-[8px]">
-            <img src="/avatar.webp" alt="sample avatar" />
+        <div className=" flex flex-col justify-center items-center gap-[8px] relative">
+            <img src="/circles.webp" className=" absolute -top-5 z-0" alt="sample avatar" />
+            <img src="/avatar.webp" className=" w-[130px] h-[130px] rounded-full z-10" alt="sample avatar" />
             <h1
-                className=" text-[20px] font-medium text-[#1B2559]">
+                className=" text-[20px] font-medium text-[#101013]">
                 {user.name}
             </h1>
 

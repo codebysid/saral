@@ -35,7 +35,8 @@ const LinksAndCodes = () => {
                 <span className=" subHeadline">Tracking Link:</span>
 
                 <div className=" flex items-center justify-between p-2 w-full border border-dashed border-primary/20 rounded-[4px]">
-                    <span className=" text-primary underline">{linkAndCode.link}</span>
+                    <span
+                        className=" text-primary underline font-firacode font-medium">{linkAndCode.link}</span>
 
                     <div className=" cursor-pointer" onClick={() => handleCopy(linkAndCode.link)}>
                         <Icons name="copyIcon" />
@@ -51,7 +52,7 @@ const LinksAndCodes = () => {
                     <div className="flex items-center gap-2 justify-between p-2 w-max border border-dashed border-primary/20 rounded-[4px]">
                         <input
                             ref={inputRef}
-                            className="text-primary underline border-none outline-none w-20 uppercase"
+                            className="text-primary underline border-none outline-none w-20 uppercase font-firacode font-medium"
                             value={linkAndCode.code}
                             onChange={handleCodeChange}
                             readOnly={editCouponCode}

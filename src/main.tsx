@@ -7,6 +7,10 @@ import RootLayout from './layouts/RootLayout.tsx';
 import Profile from './components/Profile.tsx';
 import { Provider } from "react-redux"
 import store from './redux/store.ts';
+import Assets from './components/pages/Assets.tsx';
+import Uploads from './components/pages/Uploads.tsx';
+import Payments from './components/pages/Payments.tsx';
+import Posts from './components/pages/Posts.tsx';
 
 export const router = createBrowserRouter([
   {
@@ -14,11 +18,11 @@ export const router = createBrowserRouter([
     element: <RootLayout />,
     children: [
       { index: true, element: <App /> },
-      { path: "posts", element: <Profile /> },
-      { path: "assets", element: <App /> },
-      { path: "uploads", element: <App /> },
-      { path: "payments", element: <App /> },
-      { path: "profile", element: <App /> },
+      { path: "posts", element: <Posts /> },
+      { path: "assets", element: <Assets /> },
+      { path: "uploads", element: <Uploads /> },
+      { path: "payments", element: <Payments /> },
+      { path: "profile", element: <Profile /> },
     ],
   },
 ]);

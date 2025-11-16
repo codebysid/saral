@@ -1,6 +1,11 @@
-import { Slider } from "@/components/ui/slider"
 import { cn } from "@/lib/utils"
 import Icons from "./Icons"
+import { lazy, Suspense } from "react";
+const Slider = lazy(() =>
+    import("@/components/ui/slider").then((m) => ({
+        default: m.Slider,
+    }))
+);
 
 const EarningsPanel = () => {
     return (
@@ -30,12 +35,14 @@ const EarningsPanel = () => {
                     <span>1 Post</span>
                     <span>15 Posts</span>
                 </div>
-                <Slider
-                    defaultValue={[50]}
-                    max={100}
-                    step={1}
-                    className={cn("w-[100%]")}
-                />
+                <Suspense fallback={<p>Loading...</p>}>
+                    <Slider
+                        defaultValue={[50]}
+                        max={100}
+                        step={1}
+                        className={cn("w-[100%]")}
+                    />
+                </Suspense>
             </div>
         </div>
     )

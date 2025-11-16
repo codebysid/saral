@@ -1,13 +1,27 @@
 @font-face {
   font-family: "Syne";
-  src: url("../src/assets/fonts/syne.woff2") format("woff2");
+  src: url("/fonts/syne.woff2") format("woff2");
   display: swap;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Poppins";
-  src: url("..src/assets/fonts/poppins.woff2") format("woff2");
+  src: url("/fonts/poppins.woff2") format("woff2");
+  display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FiraCode";
+  src: url("/fonts/firacode.woff2") format("woff2");
+  display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("/fonts/lato.woff2") format("woff2");
   display: swap;
   font-style: normal;
 }
@@ -58,8 +72,10 @@
   --color-subdued: var(--text-subdued);
   --color-custom-disabled: var(--color-custom-disabled);
   --color-custom-border: var(--color-custom-border);
-  --font-syne: var(--font-syne);
-  --font-poppins: var(--font-poppins);
+  --font-syne: "Syne";
+  --font-poppins: "Poppins", sans-serif;
+  --font-lato: Lato, sans-serif;
+  --font-firacode: FiraCode, sans-serif;
 }
 
 :root {
@@ -119,9 +135,7 @@
   /* custom */
   --text-subdued: rgba(97, 97, 97, 1);
   --color-custom-border: rgba(224, 224, 224, 1);
-  --font-syne: "Syne";
-  --font-poppins: "Poppins", sans-serif;
-  --color-custom-disabled: rgba(189, 189, 189, 1)
+  --color-custom-disabled: rgba(189, 189, 189, 1);
 }
 
 .dark {
