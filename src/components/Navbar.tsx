@@ -5,7 +5,7 @@ import NotificationPanel from "./NotificationPanel"
 
 const Navbar = () => {
     return (
-        <nav className=" flex items-center w-full justify-between px-3 min-h-[90px] border border-custom-border">
+        <nav className=" flex items-center w-full justify-between px-3 min-h-[90px] border border-custom-border bg-white">
             <Logo className=" text-primary text-[25.12px]" />
             <div className=" flex items-center gap-10">
                 {

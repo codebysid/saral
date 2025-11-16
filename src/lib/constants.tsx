@@ -133,9 +133,13 @@ export const iconsLib = {
     </svg>
     ),
     editPencilIcon: (<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M10.8899 3.10164L4.14811 10.2375C3.89355 10.5085 3.6472 11.0423 3.59793 11.4118L3.2941 14.0724C3.18735 15.0331 3.87712 15.6901 4.82967 15.5258L7.47382 15.0742C7.84334 15.0085 8.36067 14.7375 8.61523 14.4583L15.357 7.32242C16.523 6.09067 17.0486 4.68649 15.2338 2.97026C13.4272 1.27045 12.0559 1.8699 10.8899 3.10164Z" stroke="#7F38E9" stroke-width="1.34372" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-        <path d="M9.76367 4.29297C10.1168 6.55938 11.9562 8.29203 14.239 8.52196" stroke="#7F38E9" stroke-width="1.34372" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-        <path d="M2.46289 18.2109H17.2438" stroke="#7F38E9" stroke-width="1.34372" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M10.8899 3.10164L4.14811 10.2375C3.89355 10.5085 3.6472 11.0423 3.59793 11.4118L3.2941 14.0724C3.18735 15.0331 3.87712 15.6901 4.82967 15.5258L7.47382 15.0742C7.84334 15.0085 8.36067 14.7375 8.61523 14.4583L15.357 7.32242C16.523 6.09067 17.0486 4.68649 15.2338 2.97026C13.4272 1.27045 12.0559 1.8699 10.8899 3.10164Z" stroke="currentColor" stroke-width="1.34372" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M9.76367 4.29297C10.1168 6.55938 11.9562 8.29203 14.239 8.52196" stroke="currentColor" stroke-width="1.34372" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M2.46289 18.2109H17.2438" stroke="currentColor" stroke-width="1.34372" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    ),
+    copyIcon: (<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.1585 2.5H4.73749C3.96205 2.5 3.33398 3.12807 3.33398 3.90351V13.7281H4.73749V3.90351H13.1585V2.5ZM15.2638 5.30702H7.54451C6.76907 5.30702 6.141 5.93509 6.141 6.71053V16.5351C6.141 17.3105 6.76907 17.9386 7.54451 17.9386H15.2638C16.0392 17.9386 16.6673 17.3105 16.6673 16.5351V6.71053C16.6673 5.93509 16.0392 5.30702 15.2638 5.30702ZM15.2638 16.5351H7.54451V6.71053H15.2638V16.5351Z" fill="#7F38E9" />
     </svg>
     )
 }

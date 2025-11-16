@@ -184,3 +184,13 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .headline {
+    @apply font-medium text-[18px] text-[#404040]
+  }
+
+  .subHeadline {
+    @apply text-[14px] text-subdued
+  }
+}
