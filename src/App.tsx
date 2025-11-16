@@ -38,7 +38,7 @@ function App() {
           </Suspense>
         </div>
 
-        <div className=' flex flex-col gap-6 pt-2 w-[328px]'>
+        <div className=' flex flex-col gap-6 pt-2 w-[328px] pb-20 lg:pb-0'>
           <Suspense fallback={<Loader />}>
             <LinksAndCodes />
             <EarningsPanel />

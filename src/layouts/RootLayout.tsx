@@ -20,7 +20,7 @@ export default function RootLayout() {
                 transition={Bounce}
             />
             <Navbar />
-            <main className="h-[calc(100vh+620px)] lg:h-[calc(100vh-90px)]">
+            <main className=" lg:h-[calc(100vh-90px)]">
                 <Outlet />
             </main>
             <NavbarMobileBottomPanel />
