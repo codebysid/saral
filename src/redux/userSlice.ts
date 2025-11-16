@@ -26,9 +26,16 @@ export const userSlice = createSlice({
                 paymentEmail: action.payload.paymentEmail
             }
             return newState
+        },
+        updateEmail: (state, action: PayloadAction<{ email: string }>) => {
+            const newState: IUser = {
+                ...state,
+                email: action.payload.email
+            }
+            return newState
         }
     }
 })
 
-export const { updatePaymentEmail } = userSlice.actions
+export const { updatePaymentEmail, updateEmail } = userSlice.actions
 export default userSlice.reducer
