@@ -4,19 +4,21 @@ import Icons from "./Icons"
 import { useState, type ChangeEvent } from "react"
 import { useAutoFocus } from "@/hooks/useAutoFocus"
 import { updateEmail } from "@/redux/userSlice"
+import { useDebounce } from "@/hooks/useDebounce"
 
 const Profile = () => {
     const user = useSelector((state: RootState) => state.user)
     const [editEmail, setEditEmail] = useState<boolean>(true)
     const inputRef = useAutoFocus(editEmail === false)
     const dispatch = useDispatch<AppDispatch>()
-
+    const debounce = useDebounce(() => setEditEmail(true), 3000)
     const handleEdit = () => setEditEmail(false)
 
     const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
         dispatch(updateEmail({
             email: e.target.value
         }))
+        debounce()
     }
 
     return (

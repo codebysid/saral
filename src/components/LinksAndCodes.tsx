@@ -6,12 +6,14 @@ import { type AppDispatch, type RootState } from "@/redux/store"
 import { updateCode } from "@/redux/linksAndCodeSlice"
 import { copyToClipboard } from "@/lib/helper"
 import { toast } from "react-toastify"
+import { useDebounce } from "@/hooks/useDebounce"
 
 const LinksAndCodes = () => {
     const [editCouponCode, setEditCouponCode] = useState<boolean>(true)
     const inputRef = useAutoFocus(editCouponCode === false)
     const linkAndCode = useSelector((state: RootState) => state.linksAndCode)
     const dispatch = useDispatch<AppDispatch>()
+    const debounce = useDebounce(() => setEditCouponCode(true), 3000)
 
     const handleEdit = () => setEditCouponCode(false)
 
@@ -19,6 +21,7 @@ const LinksAndCodes = () => {
         dispatch(updateCode({
             code: e.target.value
         }))
+        debounce()
     }
 
     const handleCopy = async (data: string) => {

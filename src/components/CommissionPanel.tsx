@@ -4,16 +4,20 @@ import Icons from "./Icons"
 import { useAutoFocus } from "@/hooks/useAutoFocus"
 import { useSelector } from "react-redux"
 import type { RootState } from "@/redux/store"
+import { useDebounce } from "@/hooks/useDebounce"
 
 const CommissionPanel = () => {
     const [editEmail, setEditEmail] = useState<boolean>(true)
     const inputRef = useAutoFocus(editEmail === false);
     const userState = useSelector((state: RootState) => state.user)
     const [paymentEmail, setPaymentEmail] = useState<string>(userState.paymentEmail || "N/A")
+    const debounce = useDebounce(() => setEditEmail(true), 3000)
+
     const handleEdit = () => setEditEmail(false)
 
     const handlePaymentEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
         setPaymentEmail(e.target.value)
+        debounce()
     }
 
     return (
@@ -32,7 +36,7 @@ const CommissionPanel = () => {
                         <Icons name="emailTIcon" />
                     </div>
 
-                    <div className="lg:hidden">
+                    <div className="block lg:hidden">
                         <Icons name="emailTIconSmall" />
                     </div>
 
