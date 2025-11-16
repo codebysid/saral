@@ -29,14 +29,15 @@ const LinksAndCodes = () => {
 
     return (
         <div className=" w-full bg-white rounded-[8px]">
-            <p className=" headline border-b border-custom-border w-full py-6 px-6">My Links & Codes</p>
+            <p className=" headline border-b border-custom-border w-full p-3 lg:p-6">My Links & Codes</p>
 
-            <div className=" flex flex-col gap-[8px] border-b border-custom-border py-6 px-6">
+            <div className=" flex flex-col gap-[8px] border-b border-custom-border p-3 lg:p-6">
                 <span className=" subHeadline">Tracking Link:</span>
 
                 <div className=" flex items-center justify-between p-2 w-full border border-dashed border-primary/20 rounded-[4px]">
                     <span
-                        className=" text-primary underline font-firacode font-medium">{linkAndCode.link}</span>
+                        className=" text-primary underline font-firacode font-medium text-[14px] lg:text-[16px]">{linkAndCode.link}
+                    </span>
 
                     <div className=" cursor-pointer" onClick={() => handleCopy(linkAndCode.link)}>
                         <Icons name="copyIcon" />
@@ -45,14 +46,14 @@ const LinksAndCodes = () => {
                 </div>
             </div>
 
-            <div className=" flex flex-col gap-[8px] py-6 px-6">
+            <div className=" flex flex-col gap-[8px] p-3 lg:p-6">
                 <span className="subHeadline">Coupon Code</span>
 
                 <div className=" flex items-center gap-2">
                     <div className="flex items-center gap-2 justify-between p-2 w-max border border-dashed border-primary/20 rounded-[4px]">
                         <input
                             ref={inputRef}
-                            className="text-primary underline border-none outline-none w-20 uppercase font-firacode font-medium"
+                            className="text-primary underline border-none outline-none w-20 uppercase font-firacode font-medium text-[14px] lg:text-[16px]"
                             value={linkAndCode.code}
                             onChange={handleCodeChange}
                             readOnly={editCouponCode}

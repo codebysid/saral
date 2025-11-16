@@ -5,23 +5,30 @@ import NotificationPanel from "./NotificationPanel"
 
 const Navbar = () => {
     return (
-        <nav className=" flex items-center w-full justify-between px-3 min-h-[90px] border border-custom-border bg-white">
-            <Logo className=" text-primary text-[25.12px]" />
-            <div className=" flex items-center gap-10">
-                {
-                    navItems.map(({ icon, id, title, link }) => {
-                        return <NavItem
-                            key={id}
-                            icon={icon}
-                            title={title}
-                            route={link}
-                        />
-                    })
-                }
-            </div>
+        <>
+            <nav className=" items-center w-full justify-between px-3 min-h-[90px] border border-custom-border bg-white hidden lg:flex">
+                <Logo className=" text-primary text-[25.12px]" />
+                <div className=" flex items-center gap-10">
+                    {
+                        navItems.map(({ icon, id, title, link }) => {
+                            return <NavItem
+                                key={id}
+                                icon={icon}
+                                title={title}
+                                route={link}
+                            />
+                        })
+                    }
+                </div>
 
-            <NotificationPanel />
-        </nav>
+                <NotificationPanel />
+            </nav>
+
+            <nav className="flex items-center w-full justify-between px-3 h-[62px] border border-custom-border bg-white lg:hidden">
+                <h1 className=" font-medium text-[20px] text-black">Home</h1>
+                <NotificationPanel />
+            </nav>
+        </>
     )
 }
 

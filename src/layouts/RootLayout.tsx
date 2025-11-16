@@ -1,10 +1,11 @@
 import { Outlet } from "react-router";
 import Navbar from "@/components/Navbar";
 import { Bounce, ToastContainer } from "react-toastify"
+import NavbarMobileBottomPanel from "@/components/NavbarMobileBottomPanel";
 
 export default function RootLayout() {
     return (
-        <div className="max-w-[1500px] m-auto font-poppins bg-[#FAFAFA]">
+        <div className="max-w-[1500px] m-auto font-poppins bg-[#FAFAFA] min-h-screen">
             <ToastContainer
                 position="bottom-right"
                 autoClose={3000}
@@ -19,9 +20,10 @@ export default function RootLayout() {
                 transition={Bounce}
             />
             <Navbar />
-            <main className=" h-[calc(100vh-90px)]">
+            <main className="h-[192vh] lg:h-[calc(100vh-90px)]">
                 <Outlet />
             </main>
+            <NavbarMobileBottomPanel />
         </div>
     );
 }

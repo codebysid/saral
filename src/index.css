@@ -203,10 +203,10 @@
 
 @layer components {
   .headline {
-    @apply font-medium text-[18px] text-[#404040]
+    @apply font-medium text-[16px] lg:text-[18px] text-[#404040]
   }
 
   .subHeadline {
-    @apply text-[14px] text-subdued
+    @apply text-[12px] lg:text-[14px] text-subdued
   }
 }

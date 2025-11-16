@@ -18,7 +18,7 @@ const NavItem = ({ icon, title, route }: INavItems) => {
         >
             <div className="flex flex-col items-center gap-1 hover:text-subdued/60 transition-all duration-100">
                 <Icons name={icon as IconName} />
-                <span className=" text-[14px] text-center font-medium">{title}</span>
+                <span className=" hidden lg:inline text-[14px] text-center font-medium">{title}</span>
             </div>
         </NavLink>
     )

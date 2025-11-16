@@ -22,9 +22,10 @@ const Profile = () => {
     return (
         <div className=" flex flex-col justify-center items-center gap-[8px] relative">
             <img src="/circles.webp" className=" absolute -top-5 z-0" alt="sample avatar" />
-            <img src="/avatar.webp" className=" w-[130px] h-[130px] rounded-full z-10" alt="sample avatar" />
+
+            <img src="/avatar.webp" className=" w-[92px] lg:w-[130px] h-[92px] lg:h-[130px] rounded-full z-10" alt="sample avatar" />
             <h1
-                className=" text-[20px] font-medium text-[#101013]">
+                className="text-[16px] lg:text-[20px] font-medium text-[#101013]">
                 {user.name}
             </h1>
 
@@ -35,7 +36,7 @@ const Profile = () => {
                     type="text"
                     value={user.email}
                     onChange={handleEmailChange}
-                    className="subHeadline text-[16px] outline-0 w-[230px] max-w-[300px]"
+                    className="subHeadline text-[14px] lg:text-[16px] outline-0 w-[201px] lg:w-[230px] max-w-[300px]"
                     readOnly={editEmail}
                 />
                 <div

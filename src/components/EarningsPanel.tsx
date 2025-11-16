@@ -24,7 +24,7 @@ const EarningsPanel = () => {
                 </div>
 
                 <div className=" border-b border-custom-border w-[10%]">
-                    <span className=" font-medium text-[22px] text-custom-disabled flex items-center justify-center gap-1">
+                    <span className=" font-medium text-[16px] lg:text-[22px] text-custom-disabled flex items-center justify-center gap-1">
                         <span>$</span>
                         <span>0</span>
                     </span>
@@ -32,7 +32,7 @@ const EarningsPanel = () => {
             </div>
 
             <div className=" w-full space-y-2">
-                <div className=" flex items-center justify-between text-[14px] font-medium text-subdued">
+                <div className=" flex items-center justify-between text-[12px] lg:text-[14px] font-medium text-subdued">
                     <span>1 Post</span>
                     <span>15 Posts</span>
                 </div>

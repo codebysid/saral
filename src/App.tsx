@@ -9,23 +9,44 @@ const ProfilePanel = lazy(() => import("./components/ProfilePanel"))
 
 function App() {
   return (
-    <div className=' flex justify-center'>
+    <>
+      <div className='justify-center hidden lg:flex'>
 
-      <div className=' flex flex-col gap-6 p-6 w-[470px]'>
-        <Suspense fallback={<Loader />}>
-          <CommissionPanel />
-          <LinksAndCodes />
-        </Suspense>
+        <div className='flex flex-col gap-6 p-6 w-[470px]'>
+          <Suspense fallback={<Loader />}>
+            <CommissionPanel />
+            <LinksAndCodes />
+          </Suspense>
+        </div>
+
+        <div className=' flex flex-col gap-6 p-6 w-[500px]'>
+          <Suspense fallback={<Loader />}>
+            <ProfilePanel />
+            <EarningsPanel />
+          </Suspense>
+        </div>
+
       </div>
 
-      <div className=' flex flex-col gap-6 p-6 w-[500px]'>
-        <Suspense fallback={<Loader />}>
-          <ProfilePanel />
-          <EarningsPanel />
-        </Suspense>
-      </div>
+      {/* mobile */}
+      <div className=' justify-center items-center flex flex-col lg:hidden pb-4'>
 
-    </div>
+        <div className=' flex flex-col gap-6 pt-2 w-[328px]'>
+          <Suspense fallback={<Loader />}>
+            <ProfilePanel />
+            <CommissionPanel />
+          </Suspense>
+        </div>
+
+        <div className=' flex flex-col gap-6 pt-2 w-[328px]'>
+          <Suspense fallback={<Loader />}>
+            <LinksAndCodes />
+            <EarningsPanel />
+          </Suspense>
+        </div>
+
+      </div>
+    </>
   )
 }
 
