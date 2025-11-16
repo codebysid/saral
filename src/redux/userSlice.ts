@@ -4,14 +4,16 @@ interface IUser {
     name: string,
     email: string,
     paymentEmail: string,
-    currentBalance: number
+    currentBalance: number,
+    profileImage: string
 }
 
 const initialState: IUser = {
     currentBalance: 28.75,
     name: "Jen Nelson",
     email: "jennelsonfitness@gmail.com",
-    paymentEmail: ""
+    paymentEmail: "",
+    profileImage: ""// avatar url
 }
 
 export const userSlice = createSlice({

@@ -17,7 +17,7 @@ const CommissionPanel = () => {
     }
 
     return (
-        <div className=" text-white bg-white relative flex flex-col gap-6 justify-center items-center px-6 py-6 rounded-[8px]">
+        <div className=" text-white bg-white relative flex flex-col gap-6 justify-center items-center p-6 rounded-[8px]">
             <div className=" flex items-center justify-between w-full">
                 <span className="headline">My Commission</span>
                 <span className=" subHeadline">20% Commission</span>
