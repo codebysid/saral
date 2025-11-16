@@ -36,7 +36,7 @@ const CommissionPanel = () => {
                     ref={inputRef}
                     value={paymentEmail}
                     onChange={handlePaymentEmailChange}
-                    className="w-full text-[#212121] pl-[143px] pr-[30px] border-none outline-none "
+                    className="w-full text-[#212121] pl-[155px] pr-[30px] border-none outline-none "
                     readOnly={editEmail}
                 />
                 <div

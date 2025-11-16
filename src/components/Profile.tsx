@@ -35,7 +35,7 @@ const Profile = () => {
                     type="text"
                     value={user.email}
                     onChange={handleEmailChange}
-                    className="subHeadline text-[16px] outline-0 min-w-[205px] max-w-[300px] text-ellipsis"
+                    className="subHeadline text-[16px] outline-0 w-[230px] max-w-[300px]"
                     readOnly={editEmail}
                 />
                 <div
