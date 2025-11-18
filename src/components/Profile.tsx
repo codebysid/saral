@@ -23,7 +23,7 @@ const Profile = () => {
 
     return (
         <div className=" flex flex-col justify-center items-center gap-[8px] relative">
-            <img src="/circles.webp" className=" absolute -top-5 z-0" alt="sample avatar" />
+            <img src="/circles.webp" className=" absolute -top-3 lg:-top-5 z-0" alt="sample avatar" />
 
             <img src="/avatar.webp" className=" w-[92px] lg:w-[130px] h-[92px] lg:h-[130px] rounded-full z-10" alt="sample avatar" />
             <h1

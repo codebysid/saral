@@ -37,7 +37,10 @@ const CommissionPanel = () => {
                     </div>
 
                     <div className="block lg:hidden">
-                        <Icons name="emailTIconSmall" />
+                        <img
+                            className=" h-[14px] w-[14px]"
+                            src="/email-t-small.webp"
+                            alt="payment email icon" />
                     </div>
 
                     <span className="text-subdued">

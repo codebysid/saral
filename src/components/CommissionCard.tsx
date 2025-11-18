@@ -25,7 +25,10 @@ const CommissionCard = () => {
                         <Icons name="chipIcon" />
                     </div>
                     <div className="lg:hidden">
-                        <Icons name="chipIconSmall" />
+                        <img
+                            src="/chip-card-small.webp"
+                            className="h-[24px] w-[24px]"
+                            alt="card chip" />
                     </div>
                 </div>
 

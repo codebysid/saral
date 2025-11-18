@@ -29,16 +29,16 @@ function App() {
       </div>
 
       {/* mobile */}
-      <div className=' justify-center items-center flex flex-col lg:hidden pb-4'>
+      <div className=' justify-center items-center flex flex-col lg:hidden pb-1 gap-3'>
 
-        <div className=' flex flex-col gap-6 pt-2 w-[328px]'>
+        <div className=' flex flex-col gap-3 w-[328px] pt-3'>
           <Suspense fallback={<Loader />}>
             <ProfilePanel />
             <CommissionPanel />
           </Suspense>
         </div>
 
-        <div className=' flex flex-col gap-6 pt-2 w-[328px] pb-20 lg:pb-0'>
+        <div className=' flex flex-col gap-3 w-[328px] pb-20 lg:pb-0'>
           <Suspense fallback={<Loader />}>
             <LinksAndCodes />
             <EarningsPanel />
